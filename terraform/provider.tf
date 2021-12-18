@@ -12,7 +12,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "s3Bucket" {
-  bucket = "Host-Website-With-Github-Ci"
+  bucket = "host-website-with-github-ci"
   acl    = "public-read"
 
   policy = <<EOF
@@ -25,8 +25,8 @@ resource "aws_s3_bucket" "s3Bucket" {
       "Action": "s3:*",
       "Effect": "Allow",
       "Resource": [
-         "arn:aws:s3:::Host-Website-With-Github-Ci",
-         "arn:aws:s3:::Host-Website-With-Github-Ci/*"
+         "arn:aws:s3:::host-website-with-github-ci",
+         "arn:aws:s3:::host-website-with-github-ci/*"
       ],
       "Principal": "*"
     }
