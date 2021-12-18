@@ -14,5 +14,4 @@ terraform {
 resource "aws_s3_bucket" "s3Bucket" {
   bucket = "host-website-with-github-ci"
   acl    = "private"
-  }
 }
