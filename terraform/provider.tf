@@ -22,10 +22,10 @@ resource "aws_s3_bucket" "s3Bucket" {
   "Statement": [
     {
       "Action": [
-        "s3:*"
+        "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::terraform-remote-state-aws-ci/*",
+      "Resource": "arn:aws:s3:::Host-Website-With-Github-Ci/*",
       "Principal": "*"
     }
   ]
