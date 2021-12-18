@@ -17,15 +17,17 @@ resource "aws_s3_bucket" "s3Bucket" {
 
   policy = <<EOF
 {
-  "Id": "MakePublic",
+  "Id": "BucketPolicy",
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": [
-        "s3:*"
-      ],
+      "Sid": "AllAccess",
+      "Action": "s3:*",
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::Host-Website-With-Github-Ci/*",
+      "Resource": [
+         "arn:aws:s3:::Host-Website-With-Github-Ci",
+         "arn:aws:s3:::Host-Website-With-Github-Ci/*"
+      ],
       "Principal": "*"
     }
   ]
